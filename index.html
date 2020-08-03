@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login_div" class="main-div">
+      <h3>User Authentication</h3>
+      <input type="email" placeholder="email" id="email_field" />
+      <input type="password" placeholder="password" id="password_field" />
+
+      <button onclick="login()">Login to account</button>
+      <br />
+      <p>Don't have an account?</p>
+      <button id="create_account" onclick="create_account()">
+        Create a new account
+      </button>
+    </div>
+
+    <div id="user_div" class="loggedin-div">
+      <h3>Welcome User</h3>
+      <p id="user_para">
+        Welcome to Firebase login example.You're currently logged in
+      </p>
+      <button onclick="logout()">Logout</button>
+      <br />
+      <button onclick="send_verification()">Send Verification</button>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAMYpLEM0EVdn5_x3-nRFeaC9He6mvTM4k",
+        authDomain: "user-authentication-da8cd.firebaseapp.com",
+        databaseURL: "https://user-authentication-da8cd.firebaseio.com",
+        projectId: "user-authentication-da8cd",
+        storageBucket: "user-authentication-da8cd.appspot.com",
+        messagingSenderId: "731059941161",
+        appId: "1:731059941161:web:4d3e1cf49264cc64b9d138",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="index1.js"></script>
+  </body>
+</html>
